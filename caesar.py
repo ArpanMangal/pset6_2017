@@ -7,10 +7,12 @@ def main():
         exit(1)
     key = int(sys.argv[1])
     if key < 0:
-        print("Enter a non-negative integer key")
+        print("Entered a non-negative integer key")
         exit(0)
     
+    print("plaintext: ", end = "")
     s = cs50.get_string();
+    print("ciphertext: ", end = "")
     for c in s:
         if c.isupper():
             print(chr((ord(c) - ord("A") + key) % 26 + ord("A")), end = "")
@@ -20,6 +22,7 @@ def main():
             print(c, end = "")
         
     print()
+    exit(0)
     
     
 if __name__ == "__main__":
