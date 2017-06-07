@@ -3,11 +3,11 @@ import cs50
 def main():
     h = get_height()
     for r in range(h):
-        for c in range (h - r):
-            print(" ", end = "")
-        for c in range (r):
-            print("#", end = "")
-        print("#")
+        print(" " * (h - r), end = "")
+        print("#" * (r + 1), end = "")
+        print("  ", end = "")
+        print("#" * (r + 1), end = "")
+        print()
         
 def get_height():
     while True:
